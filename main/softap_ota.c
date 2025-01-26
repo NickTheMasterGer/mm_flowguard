@@ -69,7 +69,7 @@ esp_err_t update_post_handler(httpd_req_t *req)
 
 	httpd_resp_sendstr(req, "Firmware update complete, rebooting now!\n");
 
-	vTaskDelay(500 / portTICK_PERIOD_MS);
+	vTaskDelay(pdMS_TO_TICKS(500));
 	esp_restart();
 
 	return ESP_OK;
@@ -160,7 +160,7 @@ void softap_ota(void *arg) {
 		}
 	}
 
-	while(1) vTaskDelay(10);
+	while(1) vTaskDelay(pdMS_TO_TICKS(1000));
 }
 
 // Creating task example: show how to create pinned and unpinned tasks on CPU cores
@@ -176,6 +176,6 @@ int softap_ota_entry_func(int argc, char **argv)
     // time out and stop running after 5 seconds
     vTaskDelay(pdMS_TO_TICKS(COMP_LOOP_PERIOD));
     // delay to let tasks finish the last loop
-    vTaskDelay(500 / portTICK_PERIOD_MS);
+    vTaskDelay(pdMS_TO_TICKS(500));
     return 0;
 }

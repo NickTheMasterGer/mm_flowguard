@@ -6,7 +6,6 @@ Nicholas Stumpe
 
 
 static lv_obj_t * btn;
-static lv_display_rotation_t rotation = LV_DISP_ROTATION_90;
 static const char *LVGL_TAG = "Touch-Display";
 
 /* Rotate display and touch, when rotated screen in LVGL. Called when driver parameters are updated. */
@@ -41,13 +40,13 @@ static void example_lvgl_port_update_callback(lv_display_t *disp)
 
 static void btn_cb(lv_event_t * e)
 {
-    lv_display_t *disp = lv_event_get_user_data(e);
+    /*lv_display_t *disp = lv_event_get_user_data(e);
     rotation++;
     if (rotation > LV_DISP_ROTATION_270) {
         rotation = LV_DISP_ROTATION_0;
     }
     lv_disp_set_rotation(disp, rotation);
-    example_lvgl_port_update_callback(disp);
+    example_lvgl_port_update_callback(disp);*/
 }
 static void set_angle(void * obj, int32_t v)
 {
@@ -270,6 +269,9 @@ lv_display_t* init_display()
     lv_indev_set_display(indev, display);
     lv_indev_set_user_data(indev, tp);
     lv_indev_set_read_cb(indev, lvgl_touch_cb);
+
+    lv_disp_set_rotation(display, LV_DISP_ROTATION_90);
+    example_lvgl_port_update_callback(display);
 #endif
     return display;
 }

@@ -15,7 +15,6 @@
 #define QUEUE_CREATE_ERR_STR              "queue creation failed"
 
 int comp_creating_task_entry_func(int argc, char **argv);
-int softap_ota_entry_func(int argc, char **argv);
 //int comp_queue_entry_func(int argc, char **argv);
 //int comp_lock_entry_func(int argc, char **argv);
 //int comp_task_notification_entry_func(int argc, char **argv);

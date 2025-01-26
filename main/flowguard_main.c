@@ -6,9 +6,12 @@
 
 #include "esp_console.h"
 #include "flowguard_main.h"
-#include "ui.h"
+#include "flowguard_ui.h"
+#include "mm_flowguard.h"
+#include "softap_ota.h"
 #include "sdkconfig.h"
 
+/*
 static void register_creating_task(void)
 {
     const esp_console_cmd_t creating_task_cmd = {
@@ -35,9 +38,9 @@ static void config_console(void)
 {
     esp_console_repl_t *repl = NULL;
     esp_console_repl_config_t repl_config = ESP_CONSOLE_REPL_CONFIG_DEFAULT();
-    /* Prompt to be printed before each line.
-     * This can be customized, made dynamic, etc.
-     */
+    // Prompt to be printed before each line.
+    // This can be customized, made dynamic, etc.
+     //
     repl_config.prompt = PROMPT_STR ">";
     repl_config.max_cmdline_length = 1024;
     esp_console_dev_uart_config_t uart_config = ESP_CONSOLE_DEV_UART_CONFIG_DEFAULT();
@@ -53,10 +56,11 @@ static void config_console(void)
     printf("\n"
            "Please type the component you would like to run.\n");
 }
-
+*/
 void app_main(void)
 {
-    config_console();
-    softap_ota_entry_func(0, NULL);
+   // config_console();
+    mm_flowguard_entry_func();
+
     ui_entry_func();
 }

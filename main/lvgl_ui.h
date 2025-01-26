@@ -64,5 +64,6 @@
 #define EXAMPLE_LVGL_TASK_STACK_SIZE   (4 * 1024)
 #define EXAMPLE_LVGL_TASK_PRIORITY     2
 
+
 extern void flowguard_main_ui(lv_disp_t *disp);
 extern lv_display_t* init_display();

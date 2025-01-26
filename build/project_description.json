@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "MM_Flowguard",
-    "project_version":    "1",
+    "project_version":    "cb5ff544-dirty",
     "project_path":       "C:/dev/projekte/flowguard",
     "idf_path":           "C:/dev/idf/v5.4/esp-idf",
     "build_dir":          "C:/dev/projekte/flowguard/build",
@@ -1270,7 +1270,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [ "atanisoft__esp_lcd_touch_xpt2046", "espressif__esp_lcd_ili9341", "espressif__esp_lcd_touch", "lvgl__lvgl", "protocol_examples_common" ],
             "file": "C:/dev/projekte/flowguard/build/esp-idf/main/libmain.a",
-            "sources": [ "C:/dev/projekte/flowguard/main/flowguard_main.c", "C:/dev/projekte/flowguard/main/create_task_example.c", "C:/dev/projekte/flowguard/main/softap_ota.c", "C:/dev/projekte/flowguard/main/ui.c", "C:/dev/projekte/flowguard/main/lvgl_ui.c", "C:/dev/projekte/flowguard/build/index.html.S" ],
+            "sources": [ "C:/dev/projekte/flowguard/main/flowguard_main.c", "C:/dev/projekte/flowguard/main/create_task_example.c", "C:/dev/projekte/flowguard/main/softap_ota.c", "C:/dev/projekte/flowguard/main/flowguard_ui.c", "C:/dev/projekte/flowguard/main/lvgl_ui.c", "C:/dev/projekte/flowguard/main/ui_helpers.c", "C:/dev/projekte/flowguard/main/screens/ui_Screen1.c", "C:/dev/projekte/flowguard/main/screens/ui_ScreenFWUpdate.c", "C:/dev/projekte/flowguard/main/ui.c", "C:/dev/projekte/flowguard/main/mm_flowguard.c", "C:/dev/projekte/flowguard/build/index.html.S" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

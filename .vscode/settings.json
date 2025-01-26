@@ -8,7 +8,21 @@
     "files.associations": {
         "esp_console.h": "c",
         "basic_freertos_smp_usage.h": "c",
-        "flowguard_main.h": "c"
+        "flowguard_main.h": "c",
+        "lvgl_ui.h": "c",
+        "flowguard_ui.h": "c",
+        "sdkconfig.h": "c",
+        "ui.h": "c",
+        "lvgl.h": "c",
+        "lv_version.h": "c",
+        "param.h": "c",
+        "esp_log.h": "c",
+        "softap_ota.h": "c",
+        "unistd.h": "c",
+        "string.h": "c",
+        "mm_flowguard.h": "c",
+        "gpio.h": "c",
+        "esp_ota_ops.h": "c"
     },
     "idf.flashType": "UART",
     "idf.portWin": "COM3"
